@@ -8,7 +8,6 @@ export default function Episode() {
 
   const [episode, setEpisode] = useState(null)
   const [cast, setCast] = useState([])
-  console.log("~ cast", cast)
 
   let params = useParams()
 
@@ -33,7 +32,7 @@ export default function Episode() {
           <h1 className="text-2xl">All Episodes</h1>
         </Link>
         {episode ? (
-          <div className="">
+          <>
             <h1 className="text-2xl ">{episode.title}</h1>
             <h2 className="my-5 text-muted">{`Aired on: ${episode.air_date}`}</h2>
             {cast?.length ? (
@@ -50,7 +49,7 @@ export default function Episode() {
                 </ul>
               </>
             ) : null}
-          </div>
+          </>
         ) : null}
       </section>
     </div>
