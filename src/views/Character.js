@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { Link, NavLink, useParams } from "react-router-dom"
+import { useParams } from "react-router-dom"
 import { characters } from "../hooks/simpleFetch"
 
 export default function Character() {
@@ -15,8 +15,6 @@ export default function Character() {
       setCharacter(charactersData.find((ch) => ch.char_id === parseInt(params.characterId)))
     }
   }, [charactersData, params.characterId])
-
-  // displays name of the character, birth, nickname, image, status and the list of occupations.
 
   return (
     <div className="w-full h-screen bg-gray-800">
