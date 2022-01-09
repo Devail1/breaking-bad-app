@@ -24,7 +24,7 @@ export default function Character() {
             <h1 className="mb-4 text-3xl font-bold ">{character.name}</h1>
             <h2 className="mb-4 text-xl ">{character.birthday}</h2>
             <h2 className="mb-4 text-xl ">{character.nickname}</h2>
-            <img className="w-64" src={character.img}></img>
+            <img className="w-64" src={character.img} alt={character.name}></img>
             {character.occupation?.length ? (
               <>
                 <h4 className="mt-5 text-md font-bold">Occupation:</h4>
