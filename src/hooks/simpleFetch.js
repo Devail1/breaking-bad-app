@@ -12,4 +12,17 @@ const fetchEpisodes = async () => {
   return data
 }
 
+const fetchCharacters = async () => {
+  let data = []
+  try {
+    const response = await axios.get("https://www.breakingbadapi.com/api/characters")
+    if (response.data) data = response.data
+  } catch (error) {
+    console.log("~ error", error)
+  }
+  return data
+}
+
 export const episodes = entity(fetchEpisodes())
+
+export const characters = entity(fetchCharacters())
