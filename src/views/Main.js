@@ -15,7 +15,7 @@ export default function Main({ episodes }) {
   }, [episodes, getSeasonsFilters])
 
   return (
-    <div>
+    <section className="max-w-6xl px-4 py-12 mx-auto sm:px-6 lg:px-4">
       {seasons?.map((season) => {
         return (
           <div key={season}>
@@ -28,7 +28,6 @@ export default function Main({ episodes }) {
                     id={episode.episode_id}
                     title={episode.title}
                     airDate={episode.air_date}
-                    list={episode.characters}
                   ></Card>
                 ) : null
               })}
@@ -36,6 +35,6 @@ export default function Main({ episodes }) {
           </div>
         )
       })}
-    </div>
+    </section>
   )
 }
