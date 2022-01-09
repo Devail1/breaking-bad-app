@@ -10,20 +10,6 @@ export default function Card({ id, title, airDate, list, img }) {
           <h1 className="mt-2 text-2xl">{title}</h1>
         </NavLink>
         <h2 className="mb-5 text-lg">{`Aired on: ${airDate}`}</h2>
-        {list?.length ? (
-          <>
-            <h4 className="text-md font-bold">Cast:</h4>
-            <ul>
-              {list?.map((item, index) => {
-                return (
-                  <NavLink key={index} to={`/character/${item}`}>
-                    <li className="text-sm hover:underline">{item}</li>
-                  </NavLink>
-                )
-              })}
-            </ul>
-          </>
-        ) : null}
       </div>
     </div>
   )
