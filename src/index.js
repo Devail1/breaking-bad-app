@@ -7,7 +7,7 @@ import Episode from "./components/Episode"
 const rootElement = document.getElementById("root")
 
 render(
-  <BrowserRouter>
+  <BrowserRouter basename="/breaking-bad-app" >
     <Routes>
       <Route path="/" element={<App />} />
       <Route path="/episode/:episodeId" element={<Episode />} />
