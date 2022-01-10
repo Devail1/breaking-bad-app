@@ -1,7 +1,7 @@
 import React from "react"
 import { NavLink } from "react-router-dom"
 
-export default function Card({ id, title, airDate, list, img }) {
+export default function Card({ id, title, airDate, list }) {
   return (
     <div className="flex flex-col items-start justify-start w-full p-12 bg-gray-900 rounded-lg sahdow-lg">
       <div className="text-white ">

@@ -4,6 +4,7 @@ import { characters } from "../hooks/simpleFetch"
 
 export default function Character() {
   const charactersData = characters.use()
+  console.log("~ charactersData", charactersData)
 
   const [character, setCharacter] = useState(null)
 
@@ -22,9 +23,9 @@ export default function Character() {
         {character ? (
           <>
             <h1 className="mb-4 text-3xl font-bold ">{character.name}</h1>
-            <h2 className="mb-4 text-xl ">{character.birthday}</h2>
+            {character.birthday !== "Unknown" && <h2 className="mb-4 text-xl ">{character.birthday}</h2>}
             <h2 className="mb-4 text-xl ">{character.nickname}</h2>
-            <img className="w-64" src={character.img} alt={character.name}></img>
+            <img className="w-64 my-7" src={character.img} alt={character.name}></img>
             {character.occupation?.length ? (
               <>
                 <h4 className="mt-5 text-md font-bold">Occupation:</h4>
