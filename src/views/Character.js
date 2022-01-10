@@ -4,7 +4,6 @@ import { characters } from "../hooks/simpleFetch"
 
 export default function Character() {
   const charactersData = characters.use()
-  console.log("~ charactersData", charactersData)
 
   const [character, setCharacter] = useState(null)
 
