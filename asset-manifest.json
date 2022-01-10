@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/breaking-bad-app/static/css/main.a91627dc.css",
-    "main.js": "/breaking-bad-app/static/js/main.9695f0be.js",
+    "main.css": "/breaking-bad-app/static/css/main.064e2db2.css",
+    "main.js": "/breaking-bad-app/static/js/main.957e28cc.js",
     "index.html": "/breaking-bad-app/index.html",
-    "main.a91627dc.css.map": "/breaking-bad-app/static/css/main.a91627dc.css.map",
-    "main.9695f0be.js.map": "/breaking-bad-app/static/js/main.9695f0be.js.map"
+    "main.064e2db2.css.map": "/breaking-bad-app/static/css/main.064e2db2.css.map",
+    "main.957e28cc.js.map": "/breaking-bad-app/static/js/main.957e28cc.js.map"
   },
   "entrypoints": [
-    "static/css/main.a91627dc.css",
-    "static/js/main.9695f0be.js"
+    "static/css/main.064e2db2.css",
+    "static/js/main.957e28cc.js"
   ]
 }
