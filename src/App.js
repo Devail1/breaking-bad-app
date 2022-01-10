@@ -25,6 +25,7 @@ function App() {
           ></circle>
         </svg>
       )}
+      <Main episodes={episodesData} />
     </div>
   )
 }
