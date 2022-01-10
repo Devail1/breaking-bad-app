@@ -2,13 +2,29 @@ import Main from "./views/Main"
 import { episodes } from "./hooks/simpleFetch"
 
 function App() {
-  const data = episodes.use()
+  const episodesData = episodes.use()
 
   return (
     <div className="w-full bg-gray-800">
-      <section className="max-w-6xl px-4 py-12 mx-auto sm:px-6 lg:px-4">
-        <Main episodes={data} />
-      </section>
+      {episodesData ? (
+        <Main episodes={episodesData} />
+      ) : (
+        <svg
+          className="mx-auto h-screen w-10 animate-spin"
+          viewBox="0 0 100 100"
+          preserveAspectRatio="xMidYMid"
+        >
+          <circle
+            cx="50"
+            cy="50"
+            fill="none"
+            stroke="#85a2b6"
+            strokeWidth="10"
+            r="35"
+            strokeDasharray="164.93361431346415 56.97787143782138"
+          ></circle>
+        </svg>
+      )}
     </div>
   )
 }
