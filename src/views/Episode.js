@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
-import { Link, NavLink, useParams } from "react-router-dom"
+
+import { NavLink, useParams, useNavigate } from "react-router-dom"
 import { episodes, characters } from "../hooks/simpleFetch"
 
 export default function Episode() {
@@ -10,6 +11,7 @@ export default function Episode() {
   const [cast, setCast] = useState([])
 
   let params = useParams()
+  let navigate = useNavigate()
 
   //Get episode using params
   useEffect(() => {
@@ -28,12 +30,15 @@ export default function Episode() {
   return (
     <div className="w-full h-screen bg-gray-800">
       <section className="max-w-6xl px-4 py-12 mx-auto sm:px-6 lg:px-4 text-white">
-        <Link to="/" className="mr-2 text-blue-400">
-          <h1 className="text-2xl">All Episodes</h1>
-        </Link>
+        <h1
+          onClick={() => navigate("/")}
+          className="mb-2 cursor-pointer text-blue-400 hover:underline text-2xl"
+        >
+          All Episodes
+        </h1>
         {episode ? (
           <>
-            <h1 className="text-2xl ">{episode.title}</h1>
+            <h1 className="text-3xl ">{episode.title}</h1>
             <h2 className="my-5 text-muted">{`Aired on: ${episode.air_date}`}</h2>
             {cast?.length ? (
               <>
