@@ -1,7 +1,7 @@
 import React from "react"
 import { NavLink } from "react-router-dom"
 
-export default function Card({ id, title, airDate, list }) {
+export default function Card({ id, title, airDate, list, printLog }) {
   return (
     <div className="flex flex-col items-start justify-start w-full p-12 bg-gray-900 rounded-lg sahdow-lg">
       <div className="text-white ">
@@ -25,6 +25,9 @@ export default function Card({ id, title, airDate, list }) {
           </>
         ) : null}
       </div>
+      <button className="text-white" onClick={() => printLog(title)}>
+        Print title
+      </button>
     </div>
   )
 }

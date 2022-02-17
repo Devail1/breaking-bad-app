@@ -14,6 +14,10 @@ export default function Main({ episodes }) {
     if (episodes?.length) getSeasonsFilters()
   }, [episodes, getSeasonsFilters])
 
+  const printLog = (value) => {
+    console.log("~ value", value)
+  }
+
   return (
     <section className="max-w-6xl px-4 py-12 mx-auto sm:px-6 lg:px-4">
       {seasons?.map((season) => {
@@ -28,6 +32,7 @@ export default function Main({ episodes }) {
                     id={episode.episode_id}
                     title={episode.title}
                     airDate={episode.air_date}
+                    printLog={printLog}
                   ></Card>
                 ) : null
               })}

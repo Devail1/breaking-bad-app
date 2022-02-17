@@ -1,5 +1,6 @@
 import Main from "./views/Main"
 import { episodes } from "./hooks/simpleFetch"
+import { useContext, Provider } from "react"
 
 function App() {
   const episodesData = episodes.use()
@@ -25,7 +26,7 @@ function App() {
           ></circle>
         </svg>
       )}
-      <Main episodes={episodesData} />
+      {/* <Main episodes={episodesData} /> */}
     </div>
   )
 }
